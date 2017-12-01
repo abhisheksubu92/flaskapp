@@ -38,13 +38,13 @@ def prediction():
 	id = request.form['id']
 	value = pd.read_sql_query('''SELECT Distinct * FROM test where test.Loan_ID ='{}' '''.format(id), csv_database,index_col = 'index')
 	#test['Dependents'] = [str(x) for x in list(test['Dependents'])]
-	loan_ids = value['Loan_ID']
+	#loan_ids = value['Loan_ID']
 	#Load the saved model
 	print("Loading the model...")
 	loaded_model = None
 	with open(clf,'rb') as f:
 		loaded_model = pickle.load(f)
-		
+
 	predictions = loaded_model.predict(value)
 	# prediction_series = list(pd.Series(predictions))
 	# final_predictions = pd.DataFrame(list(zip(loan_ids, prediction_series)))
