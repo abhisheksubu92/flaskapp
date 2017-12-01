@@ -44,6 +44,7 @@ def prediction():
 	loaded_model = None
 	with open(clf,'rb') as f:
 		loaded_model = pickle.load(f)
+		
 	predictions = loaded_model.predict(value)
 	# prediction_series = list(pd.Series(predictions))
 	# final_predictions = pd.DataFrame(list(zip(loan_ids, prediction_series)))
