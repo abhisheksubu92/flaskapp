@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<title>Loan Defaulters App</title>
+  <head>
+  <meta charset="utf-8">
+  <title> Deploying Machine Learning Models</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="{{url_for('static',filename = 'css/bootstrap.min.css')}}" rel="stylesheet">
+  <link relation ='shortcut icon' href="{{url_for('static',filename = 'favicon.ico')}}" > 
+  </head>
+<header>
+ <nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="#">
+    <img src="{{url_for('static',filename='images/loan.png')}}" width="90" height="90" alt="">
+  </a>
+</nav>
+</header>
+
+
+<body>
+
+	<script src = '//code.jquery.com/jquery-1.11.1.min.js'></script>
+
+<h3> Default Prediction: {{ prediction }} </h3>
+
+<p><h2> [0] = No Default </h2></p>
+<p><h2> [1] = Default </h2></p>
+
+</body>
+</html>
+

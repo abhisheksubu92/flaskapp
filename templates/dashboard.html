@@ -1,0 +1,77 @@
+{% extends "header.html" %}
+
+
+{% block body %}
+<!-- Nav tabs -->
+<ul class="nav nav-tabs" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" data-toggle="tab" href="#home" role="tab">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" href="#problem" role="tab">Problem</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" href="#model" role="tab">model</a>
+  </li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content">
+  <div class="tab-pane active" id="home" role="tabpanel">
+  	
+ <br/>
+<p>Flask is a web application framework written in Python. Armin Ronacher, who leads an international group of Python enthusiasts named Pocco, develops it. Flask is based on Werkzeug WSGI toolkit and Jinja2 template engine. Both are Pocco projects.</p>
+
+<p>In this example  will be creating a small web application for the data set obtained from Analytics Vidya namely the loan prediction</p>
+
+    </p>
+
+  </div>
+  <div class="tab-pane" id="problem" role="tabpanel"> 
+
+<p><h3> About Company </h3>
+Dream Housing Finance company deals in all home loans. They have presence across all urban, semi urban and rural areas. Customer first apply for home loan after that company validates the customer eligibility for loan. </p>
+
+<p><h3> Problem</h3>
+Company wants to automate the loan eligibility process (real time) based on customer detail provided while filling online application form. These details are Gender, Marital Status, Education, Number of Dependents, Income, Loan Amount, Credit History and others. To automate this process, they have given a problem to identify the customers segments, those are eligible for loan amount so that they can specifically target these customers. Here they have provided a partial data set. Please have a look at <a href="https://datahack.analyticsvidhya.com/contest/practice-problem-loan-prediction-iii/">Loan Prediction</a></p>
+
+  	 
+
+  </div>
+  <div class="tab-pane" id="model" role="tabpanel">
+  
+  <div style="width:400px; margin-right:auto; margin-left:auto;margin-top:30px; border:1px solid #000;">	
+  <form action="/" method="POST" >
+
+  <div class="form-group">
+    <input type="text" class="form-control" name="id">
+</div>
+
+<button type="submit" class="btn btn-default">Submit</button>
+ </form>
+</div>
+
+  <!-- 
+  	<form action = "/model" method="POST">
+	<p> Enter Id: <input name="id" type ="text"/> </p>
+	<p> <input type ="submit" value="submit" /> </p>
+	</form> -->
+</br>
+<div style="width:400px; margin-right:auto; margin-left:auto; border:1px solid #000;">
+
+<h3> Default Prediction: {{ prediction }} </h3>
+<!-- <h3> {{url_for('prediction')}} -->
+
+<p>  [0] = No Default </h3></p>
+</br>
+<p> [1] = Default </p>
+</div>
+
+
+
+  </div>
+</div>
+
+
+
+{%endblock%}
