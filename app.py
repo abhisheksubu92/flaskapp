@@ -52,7 +52,7 @@ def prediction():
 	#responses.status_code = 200
 
 	# return redirect(prediction=predictions)
-	return render_template('dashboard.html',prediction=predictions)
+	return render_template('dashboard.html',prediction=predictions.value)
 
 
 if __name__=='__main__':
